@@ -19,7 +19,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-DB_PATH = r"C:\Users\palya\Desktop\attendance_tracker\face_database.pkl"
+DB_PATH = r"C:\Users\palya\Desktop\attendance_tracker\Attendance_tracker\backend\face_database.pkl"
 
 if os.path.exists(DB_PATH):
     with open(DB_PATH, "rb") as f:

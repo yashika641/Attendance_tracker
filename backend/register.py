@@ -4,8 +4,7 @@ import numpy as np
 import os
 from face_modal import get_embedding
 
-DB_FILE = os.path.join(os.path.dirname(__file__), "face_database.pkl")
-
+DB_FILE = r"C:\Users\palya\Desktop\attendance_tracker\Attendance_tracker\backend\face_database.pkl"
 def register_user(user_id, name):
     cap = cv2.VideoCapture(0)
     embeddings = []
@@ -46,6 +45,12 @@ def register_user(user_id, name):
         pickle.dump(db, f)
 
     print("✅ Registration complete")
+    print(f"User ID: {user_id}, Name: {name}")
+    print(f"Total registered users: {len(db)}")
+    print(f"Database file located at: {DB_FILE}")
+    print("You can now proceed to the attendance tracking module.")
+    print("=========================================")
+    print("eof db file", os.path.getsize(DB_FILE), "bytes")
 
 if __name__ == "__main__":
     uid = input("Enter User ID: ")
